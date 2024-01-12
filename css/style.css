@@ -1,0 +1,133 @@
+/* La tarea para la clase que viene consiste en armar una página con un título animado, el juego de las 4 cajas pero hecho con flex y opcionalmente copiar un footer de cualquier página. Recuerden instalar Git y crearse una cuenta de GitHub, eso es todo, nos vemos la clase que viene! */
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,600&family=Rubik+Maps&display=swap');
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Rubik Maps', system-ui; */
+
+/* Normalize */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style colors */
+:root{
+    --color1: #222831;
+    --color2: #393E46;
+    --color3: #00ADB5;
+    --color4: #EEEEEE;
+    --font1: "Raleway";
+    --font2: "Rubik Maps"
+}
+
+header{
+    text-align: center;
+    background: var(--color3);
+    color: var(--color1s);
+    margin: 15px;
+}
+
+@keyframes titles{
+    0%{
+        transform : rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.titles{
+    font-family: var(--font1);
+    animation: titles 2s ease-in-out;
+}
+
+.titles:hover{
+    animation-iteration-count: infinite;
+}
+
+p{
+    font-family: var(--font2);
+}
+
+.container{
+    width: 450px;
+    height: 450px;
+    max-width: 450px;
+    max-height: 450px;
+    background: var(--color3);
+    display: flex;
+    flex-wrap: wrap;
+    position:  relative;
+    margin: auto;
+}
+
+@keyframes psycodelic {
+    0%{
+        background: yellow;
+    }
+    25%{
+        background: red;
+    }
+    50%{
+        background: green;
+    }
+    75%{
+        background: blue;
+    }
+    100%{
+        background: yellow;
+    }
+}
+
+.box{
+    background-color: var(--color2);
+    width: 100px;
+    height: 100px;
+    position:  absolute;
+}
+
+.box:hover{
+    animation: psycodelic 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box1{
+    top: 0;
+    left: 0;
+}
+
+.box2{
+    top:0;
+    right: 0;
+}
+
+.box3{
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+.box4{
+    bottom: 0;
+    left: 0;
+}
+
+.box5{
+    bottom: 0;
+    right: 0;
+}
+
+footer .footer{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: var(--color2);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
